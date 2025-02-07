@@ -1,0 +1,5 @@
+For this project, I built an interactive optical illusion using p5.js. I started with a rotating spiral of shapes, using simple math to keep the movement smooth and balanced. I wanted the visuals to be soft, so I added gentle color changes to avoid making it too bright or overwhelming.
+
+To make it more interactive, I connected the mouse position to the animation. Moving the mouse changed the speed of rotation and the size of the shapes, so users could control what was happening. I also added a feature where clicking the screen switched between different shapes, like circles, squares, triangles, and lines, so the pattern would keep changing.
+
+The hardest part was making sure the animation stayed interesting but not too busy or harsh on the eyes. I learned how to create simple but engaging visuals, and how to let people interact with the design without it feeling too complicated.

@@ -1,0 +1,71 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.mainContainer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 10px solid white;
+    border-radius: 15px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#tabs {
+    font-size: clamp(16px, 5vw, 600px);
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#tabs a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    padding: 5px 10px;
+}
+
+#tabs a:hover {
+    color: gray;
+    transform: scale(1.1);
+}
+
+.back-btn {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    padding: 5px 10px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.back-btn:hover {
+    color: gray;
+    transform: scale(1.1);
+}
+
+html, body {
+    height: 100%;
+}
