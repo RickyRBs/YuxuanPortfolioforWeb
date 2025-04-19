@@ -1,0 +1,99 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz-container {
+  width: 90%;
+  max-width: 700px;
+  background: #111;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(255,255,255,0.1);
+}
+
+.question {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.answer-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.answer-labels div {
+  width: 32%;
+  text-align: center;
+}
+
+.scale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.scale label {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.scale input[type="radio"] {
+  display: none;
+}
+
+.scale .circle {
+  border-radius: 50%;
+  background: #444;
+  transition: 0.3s;
+}
+
+/* 极化大小设置：两端最大，中间最小 */
+.scale label:nth-child(1) .circle { width: 36px; height: 36px; }
+.scale label:nth-child(2) .circle { width: 30px; height: 30px; }
+.scale label:nth-child(3) .circle { width: 24px; height: 24px; }
+.scale label:nth-child(4) .circle { width: 18px; height: 18px; }
+.scale label:nth-child(5) .circle { width: 24px; height: 24px; }
+.scale label:nth-child(6) .circle { width: 30px; height: 30px; }
+.scale label:nth-child(7) .circle { width: 36px; height: 36px; }
+
+.scale input[type="radio"]:checked + .circle {
+  background: #fff;
+  box-shadow: 0 0 5px #fff;
+  transform: scale(1.2);
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+#result {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
