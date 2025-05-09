@@ -2,6 +2,9 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: black; 
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    height: 100%;
 }
 
 .mainContainer {
@@ -58,6 +61,7 @@ html, body {
     text-decoration: none;
     color: white;           
     cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .gallery-item:hover {
@@ -81,6 +85,7 @@ html, body {
     letter-spacing: 1px;
     transition: color 0.3s ease-in-out;
     margin: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .gallery-item:hover h3 {
@@ -88,19 +93,48 @@ html, body {
 }
 
 .back-btn {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin: 0;
     text-decoration: none;
     color: white;
     transition: all 0.3s ease-in-out;
     padding: 5px 10px;
     position: absolute;
-    top: 30px;
+    top: 20px;
     right: 30px;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .back-btn:hover {
     color: gray;
     transform: scale(1.1);
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+    .mainContainer {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        border-width: 5px;
+        padding: 15px;
+    }
+    
+    .back-btn {
+        font-size: 1.2rem;
+        top: 15px;
+        right: 20px;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 }

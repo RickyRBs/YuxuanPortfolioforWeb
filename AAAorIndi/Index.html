@@ -3,23 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project 4 Questionnaire</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Questionnaire</title>
+  <link rel="stylesheet" href="../CSS/Mainpagestyle.css">
 </head>
 <body>
-  <div class="quiz-container">
-    <div class="question" id="question-text"></div>
+  <div class="mainContainer">
+    <h1>Questionnaire</h1>
+    <a href="../Gallery.html" class="back-btn">BACK</a>
+    
+    <div class="content-area">
+      <div class="quiz-container">
+        <div class="question" id="question-text"></div>
 
-    <div class="answer-labels" id="answer-labels">
-      <div id="label-left"></div>
-      <div id="label-right"></div>
+        <div class="answer-labels" id="answer-labels">
+          <div id="label-left"></div>
+          <div id="label-right"></div>
+        </div>
+
+        <div class="scale" id="scale-options"></div>
+
+        <button onclick="nextQuestion()">NEXT</button>
+
+        <div id="result"></div>
+      </div>
     </div>
-
-    <div class="scale" id="scale-options"></div>
-
-    <button onclick="nextQuestion()">NEXT</button>
-
-    <div id="result"></div>
   </div>
 
   <script src="script.js"></script>

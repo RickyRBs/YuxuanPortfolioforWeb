@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Recommender</title>
+  <link rel="stylesheet" href="../CSS/Mainpagestyle.css">
+</head>
+<body>
+  <div class="mainContainer">
+    <h1>Movie Recommender</h1>
+    <a href="../Gallery.html" class="back-btn">BACK</a>
+    
+    <div class="content-area">
+      <div class="quiz-container">
+        <div class="form-group">
+          <label for="genreInput">GENRE:</label>
+          <input type="text" id="genreInput" class="text-input" />
+        </div>
+
+        <div class="form-group">
+          <label for="languageInput">LANGUAGE:</label>
+          <input type="text" id="languageInput" class="text-input" />
+        </div>
+
+        <div class="form-group">
+          <label>SELECT DURATION:</label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="duration" value="under2" checked> Under 2 hours</label>
+            <label class="radio-option"><input type="radio" name="duration" value="over2"> Over 2 hours</label>
+          </div>
+        </div>
+
+        <button id="recommendBtn">Search</button>
+        
+        <div id="errorMessage" class="error-message"></div>
+
+        <div id="movieBox" class="result-container" style="display: none;">
+          <h2 id="movieTitle"></h2>
+          <div class="movie-content">
+            <img id="moviePoster" src="" alt="Movie poster" />
+            <div class="movie-text">
+              <p id="moviePlot"></p>
+              <p id="movieRuntime"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

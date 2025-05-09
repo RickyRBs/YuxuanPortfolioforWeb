@@ -1,3 +1,15 @@
+@import url('../CSS/base.css');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background-color: #000;
@@ -10,13 +22,80 @@ body {
   justify-content: center;
 }
 
+.mainContainer {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 10px solid white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header h1 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.back-btn {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.back-btn:hover {
+  color: gray;
+  transform: scale(1.1);
+}
+
+.content-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .quiz-container {
   width: 90%;
   max-width: 700px;
   background: #111;
-  padding: 3rem;
+  padding: 2.5rem;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(255,255,255,0.1);
+  border: 3px solid white;
+  transition: all 0.3s ease-in-out;
+}
+
+.quiz-container:hover {
+  box-shadow: 0 15px 30px rgba(255,255,255,0.15);
+  border-color: white;
 }
 
 .question {
@@ -24,6 +103,7 @@ body {
   font-weight: 600;
   margin-bottom: 2rem;
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .answer-labels {
@@ -35,7 +115,7 @@ body {
 }
 
 .answer-labels div {
-  width: 32%;
+  width: 45%;
   text-align: center;
 }
 
@@ -83,11 +163,19 @@ button {
   margin: 0 auto;
   padding: 0.7rem 2rem;
   font-size: 1rem;
-  border: none;
+  border: 2px solid white;
   border-radius: 8px;
-  background: #fff;
-  color: #000;
+  background: transparent;
+  color: white;
   cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: white;
+  color: black;
 }
 
 #result {
@@ -96,4 +184,35 @@ button {
   margin-top: 2rem;
   font-weight: bold;
   color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#result.show {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-width: 5px;
+  }
+  
+  .quiz-container {
+    padding: 1.5rem;
+  }
+  
+  .question {
+    font-size: 1.2rem;
+  }
+  
+  .back-btn {
+    font-size: 1.5rem;
+  }
 }
